@@ -25,7 +25,7 @@
 
 
   <title>OmniNxt</title>
-  <link rel="icon" type="image/x-icon" href="static/images/drone.png">
+  <link rel="icon" type="image/x-icon" href="static/images/oxlogo.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,26 +52,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">OmniNxt: A Fully Open-source and Compact Aerial Robot with Omnidirectional Visual Perception</h1>
+            <h1 class="title is-1 publication-title"><img src="static/images/omnilogo.ico" alt="ox Image" width="60" height="60"/> OmniNxt</h1>
+            <h1 class="title is-2 publication-title">A Fully Open-source and Compact Aerial Robot with Omnidirectional Visual Perception</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a>Peize Liu</a><sup>1</sup>,</span>
+                <a>Peize Liu</a>,</span>
                 <span class="author-block">
-                  <a href="https://chen-albert-feng.github.io/AlbertFeng.github.io/" target="_blank">Chen Feng</a><sup>1,#</sup>,</span>
+                  <a href="https://chen-albert-feng.github.io/AlbertFeng.github.io/" target="_blank">Chen Feng</a><sup>†</sup>,</span>
               <span class="author-block">
-                  <a>Yang Xu</a><sup>1</sup>,</span>
+                  <a>Yang Xu</a>,</span>
                   <span class="author-block">
-                    <a>Yan Ning</a><sup>1</sup>,</span>
+                    <a>Yan Ning</a>,</span>
                   <span class="author-block">
-                    <a href="https://www.xuhao1.me/" target="_blank">Hao Xu</a><sup>1,#</sup>, and</span>
+                    <a href="https://www.xuhao1.me/" target="_blank">Hao Xu</a><sup>†</sup>, and</span>
                   <span class="author-block">
-                    <a href="https://uav.hkust.edu.hk/group/" target="_blank">Shaojie Shen</a><sup>1</sup></span>
+                    <a href="https://uav.hkust.edu.hk/group/" target="_blank">Shaojie Shen</a></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>HKUST <br>Submitted to IEEE/RSJ International Conference on Intelligent Robots and Systems (<strong>IROS</strong>), 2024.</span>
-                    <span class="eql-cntrb"><small><br><sup>#</sup>Indicates Corresponding Authors</small></span>
+                    <span class="author-block">HKUST Aerial Robotics Group <br>Submitted to IEEE/RSJ International Conference on Intelligent Robots and Systems (<strong>IROS</strong>), 2024.</span>
+                    <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Corresponding Authors</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -100,12 +101,12 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/HKUST-Aerial-Robotics/FC-Planner" target="_blank"
+                    <a href="https://github.com/HKUST-Aerial-Robotics/OmniNxt" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Open Source</span>
                   </a>
                 </span>
 
@@ -151,24 +152,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            3D coverage path planning for UAVs is a crucial
-            problem in diverse practical applications. However, existing
-            methods have shown unsatisfactory system simplicity, computation efficiency, and path quality in large and complex
-            scenes. To address these challenges, we propose FC-Planner,
-            a skeleton-guided planning framework that can achieve fast
-            aerial coverage of complex 3D scenes without pre-processing.
-            We decompose the scene into several simple subspaces by a
-            skeleton-based space decomposition (SSD). Additionally, the
-            skeleton guides us to effortlessly determine free space. We
-            utilize the skeleton to efficiently generate a minimal set of
-            specialized and informative viewpoints for complete coverage. Based on SSD, a hierarchical planner effectively divides
-            the large planning problem into independent sub-problems,
-            enabling parallel planning for each subspace. The carefully
-            designed global and local planning strategies are then incorporated to guarantee both high quality and efficiency in
-            path generation. We conduct extensive benchmark and realworld tests, where FC-Planner computes over 10 times faster
-            compared to state-of-the-art methods with shorter path and
-            more complete coverage. The source code will be open at
-            https://github.com/HKUST-Aerial-Robotics/FC-Planner.
+            Adopting omnidirectional Field of View (FoV) cameras in aerial robots vastly improves perception ability, significantly advancing aerial robotics's capabilities in inspection, reconstruction, and rescue tasks. However, such sensors also elevate system complexity, e.g., hardware design, and corresponding algorithm, which limits researchers from utilizing aerial robots with omnidirectional FoV in their research. To bridge this gap, we propose OmniNxt, a fully open-source aerial robotics platform with omnidirectional perception. We design a high-performance flight controller NxtPX4 and a multi-fisheye camera set for OmniNxt. Meanwhile, the compatible software is carefully devised, which empowers OmniNxt to achieve accurate localization and real-time dense mapping with limited computation resource occupancy. We conducted extensive real-world experiments to validate the superior performance of OmniNxt in practical applications. All the hardware and software are open-access at https://github.com/HKUST-Aerial-Robotics/OmniNxt, and we provide docker images of each crucial module in the proposed system. 
+            Project page: https://hkust-aerial-robotics.github.io/OmniNxt.
           </p>
         </div>
       </div>
