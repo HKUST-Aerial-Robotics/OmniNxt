@@ -16,10 +16,13 @@
         <sup>†</sup>Corresponding Authors
     </p>
     <a href='https://hkust-aerial-robotics.github.io/OmniNxt/'><img src='https://img.shields.io/badge/Project_Page-OmniNxt-green' alt='Project Page'></a>
-    <!-- <a href="https://www.bilibili.com/video/BV1fy4y1F7Z6/?spm_id_from=333.999.0.0&vd_source=7d9ba13550e9ec24b6bf69d5c3ff3"><img alt="Bilibili" src="https://img.shields.io/badge/Video-Bilibili-blue"/></a>
-    <a href="https://www.youtube.com/watch?v=jjPPIAAkPrk"><img alt="Youtube" src="https://img.shields.io/badge/Video-Youtube-red"/></a> -->
+    <a href="https://www.bilibili.com/video/BV1AK421Y7Vz/?spm_id_from=333.999.0.0&vd_source=0af61c122e5e37c944053b57e313025a"><img alt="Bilibili" src="https://img.shields.io/badge/Video-Bilibili-blue"/></a>
+    <!-- <a href="https://www.youtube.com/watch?v=jjPPIAAkPrk"><img alt="Youtube" src="https://img.shields.io/badge/Video-Youtube-red"/></a> -->
 </div>
 
-![image-20240315190430876](https://raw.githubusercontent.com/Peize-Liu/my-images/master/202403151904046.png)
+<div align="center">
+  <img src="misc/system_overview.png" alt="system overview" />
+</div>
+
 
 Coming soon ~~~~
