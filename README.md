@@ -26,4 +26,47 @@
 </div>
 
 
-Coming soon ~~~~
+## Hardware
+
+You can access our latest design by using Fusion360.
+
+Projest link: https://a360.co/3vK6dJd
+
+Access code: hkustUAV
+
+### BOM
+
+All our components can be purchased at Taobao
+
+| Component                     | Specification                                                | Link                                                         |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ***Quad-Fisheye Camera Set*** |                                                              |                                                              |
+| OAK-FFC-4P                    | Camera control board                                         | [Official](https://shop.luxonis.com/products/oak-ffc-4p) / [Taobao](https://detail.tmall.com/item.htm?abbucket=2&id=797243380525&ns=1&priceTId=213e37fe17166914596117457e9698&skuId=5432965948084&spm=a21n57.1.item.4.2d47523c7FgKjv) |
+| B0335 (OV9782)                | Camera  modules (210-degree fisheye lens)                    | [Official](https://www.arducam.com/product/arducam-1mp-ov9782-global-shutter-color-mipi-camera-module-22pin-for-depthai-oak-dm1090ffc) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=681463610876&ns=1&priceTId=213e376b17166916784225765e28ee&skuId=5076193835807&spm=a21n57.1.item.10.2d47523c7FgKjv) |
+| Camera cables                 | Customized                                                   | Camera cable SCH                                             |
+| ***Onboard computer***        |                                                              |                                                              |
+| Jetson Orin Nx                |                                                              |                                                              |
+| Jetson Orin Nx carrier board  |                                                              |                                                              |
+| Jetson Orin Nx radiator       |                                                              |                                                              |
+| Jeston Orin Network card      |                                                              |                                                              |
+| ***Flight platforms*** (6S)   |                                                              |                                                              |
+| Nxt-FC                        | [Project Page](https://github.com/HKUST-Aerial-Robotics/Nxt-FC) | MicoAir / Taobao                                             |
+| Flight frame                  | Customized                                                   | [Fusion360](https://a360.co/3vK6dJd)                         |
+| Protector                     | Customized / Oddity RC XI35 protector                        | [Fusion360](https://a360.co/3vK6dJd) / [Oddity RC](https://oddityrc.com/products/oddityrc-xi35-pro-1?variant=42274592981142) |
+| Motors                        | 2204 1750KV/ 1804 2450KV                                     |                                                              |
+| 6S Battery                    |                                                              |                                                              |
+
+
+
+#### Camera cable SCH
+
+![image-20240526120914708](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202405261209056.png)
+
+
+
+### Calibration
+
+
+
+### Runtime setup
+
