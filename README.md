@@ -1,6 +1,6 @@
 <div align="center">
     <h2>OmniNxt: A Fully Open-source and Compact Aerial Robot with Omnidirectional Visual Perception</h2>
-    <strong>Submitted to IROS 2024</strong>
+    <strong>IROS 2024 Oral</strong>
     <br>
         <a href="https://uav.hkust.edu.hk/current-members/" target="_blank">Peize Liu</a>,
         <a href="https://chen-albert-feng.github.io/AlbertFeng.github.io/" target="_blank">Chen Feng</a><sup>†</sup>,
@@ -25,6 +25,9 @@
   <img src="misc/system_overview.png" alt="system overview" />
 </div>
 
+## News
+
+* **[30/06/2024]**: OmniNxt is accepted to IROS 2024.
 
 ## Hardware
 
