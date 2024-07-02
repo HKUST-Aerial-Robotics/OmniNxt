@@ -28,6 +28,7 @@
 ## News
 
 * **[30/06/2024]**: OmniNxt is accepted to IROS 2024.
+* The whole project (Hardware and Software) will be released before 15.Aug. ( I am currently cooperating with the hardware producer to make the reproduction easier, and fixing some bug in Omni-VINS to make it easy to be implemented on Jetson Orin NX). If you want early access please contact ()
 
 ## Hardware
 
@@ -67,9 +68,38 @@ All our components can be purchased at Taobao
 
 ![image-20240526120914708](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202405261209056.png)
 
+-----
+
+-----
+
+### Hardware system Overview
 
 
-### Calibration
+
+
+
+
+
+### Multi-fisheye camera set
+
+![image-20240703002552632](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202407030025811.png)
+
+
+
+
+
+
+
+### Jetson Orin
+
+
+
+
+
+### Nxt-FC
+
+
+
 
 
 
