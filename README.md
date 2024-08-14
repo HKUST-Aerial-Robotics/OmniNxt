@@ -28,7 +28,7 @@
 ## News
 
 * **[30/06/2024]**: OmniNxt is accepted to IROS 2024.
-* The whole project (Hardware and Software) will be released before 15.Aug. ( I am currently cooperating with the hardware producer to make the reproduction easier, and fixing some bug in Omni-VINS to make it easy to be implemented on Jetson Orin NX). If you want early access please contact ()
+* **[15/08/2024]** V0.1 Release
 
 ## Hardware
 
@@ -72,13 +72,9 @@ All our components can be purchased at Taobao
 
 -----
 
-### Hardware system Overview
 
 
-
-
-
-
+## System Settings
 
 ### Multi-fisheye camera set
 
@@ -88,20 +84,138 @@ All our components can be purchased at Taobao
 
 
 
+Camera hardware preparation and ROS wrap driver see [oak_ffc_4p](https://github.com/D2SLAM-Fusion/oak_ffc_4p_ros)
 
+Calibrate this camera set see [quater-calib](https://github.com/D2SLAM-Fusion/tools-quarterKalibr?tab=readme-ov-file)
 
 ### Jetson Orin
 
+Our Jetson Info:
 
+![image-20240813153943466](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408131539535.png)
 
-
+We suggest you follow these settings to avoid conflict (especially CUDA and tensorRT).
 
 ### Nxt-FC
 
+We open-source a coin-size PX4-based flight controller see [NXT-FC](https://github.com/HKUST-Aerial-Robotics/Nxt-FC)
 
-
-
-
+Follow the **Setting up Nxt-FC** part to configure your flight controller.
 
 ### Runtime setup
+
+Our Omni-VINS and Omni-Depth are developed from D2SLAM. Since building the docker images on the local host (Jetson Orin) usually takes a long time, we suggest you pull the images from the docker-hub.
+
+the docker images structure is as follows:
+
+![docker_image_strcture](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408142216869.png)
+
+#### Step 1 Clone the repository into your local machine
+
+```shell
+git clone --branch pr_fix_main https://github.com/HKUST-Aerial-Robotics/D2SLAM.git
+```
+
+#### Step 2 Configure your quad-cam parameters and VINS parameters following our template
+
+```shell
+cd ./D2SLAM/config/quadcam_drone_nxt_tmp
+```
+
+if you have already calibrated your quad fisheye camera set, you can simply replace the files with the same name, which includes:
+
+1. **stereo_calib_n_m_240_320.yaml** (n and m is the camera number; used in Omni-Depth). 
+2. **fisheye_cams.yaml**. (used in Omni-VINS)
+
+#### Step 3 Configure ./start_docker.sh script with your local environment.
+
+./start_docker.sh is under the **./D2SLAM** directory.
+
+Modify the following parameters with the absolute path under your local host environment.
+
+1. DATA_SET (where the data set is) (Optional)
+
+Then run with the following command under the D2SLAM directory(very important, this will map your D2SLAM dir into the container)：
+
+```shell
+./start_docker.sh 1
+```
+
+#### Step 4 Launch algorithm modules
+
+***run all algorithm modules together (Omni-VINS & Omni-Depth)***
+
+```shell
+## you should under /root/swarm_ws/
+source ./devel/setup.bash
+roslaunch d2vins quadcam.laucnh
+```
+
+***Only launch Omni-VINS, please remove the nodes in the red box*** 
+
+![image-20240814230125692](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408142301837.png)
+
+and then
+
+```shell
+source ./devel/setup.bash
+roslaunch d2vins quadcam.laucnh
+```
+
+***Only launch Omni-Depth***
+
+```shell
+source ./devel/setup.bash
+roslaunch quadcam_depth_est depth-node.launch
+```
+
+[Notice] If you are running Omni-VINS and Omni-Depth for the first time, the initialization time for these two modules would be a little bit long as these two modules would generate the inference engine.
+
+
+
+#### Almost done
+
+If everything works well, you will see
+
+![image-20240814230904005](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408142309079.png)
+
+which means Omni-VINS(D2VINS) initialized normally.
+
+
+
+And 
+
+![image-20240814231049022](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408142310101.png)
+
+for Omni-Depth.
+
+
+
+#### Other settings
+
+OmniNxt px4 parameter: 
+
+
+
+##### PX4 Controller
+
+We highly suggest you refer to Fast-Lab's PX4 controller [PX4-Control](https://github.com/ZJU-FAST-Lab/Fast-Drone-250/tree/master/src/realflight_modules/px4ctrl)
+
+We also provide our yaw-rotation-free version of  Fast-Lab's PX4 controller [PX4-Control](https://github.com/D2SLAM-Fusion/controller-PX4Control).
+
+ Please cite ZJU-Fast-Lab if these modules are useful for your research and project.
+
+##### Flight planer
+
+We modified some of the strategies in the [ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner.git).  Our version is here [ego-planner-omni-modify](https://github.com/D2SLAM-Fusion/planner-EgoPlanner) 
+
+ Please cite ZJU-Fast-Lab's [ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner.git) if these modules are useful for your research and project.
+
+
+
+#### Trouble shooting
+
+
+
+### Reference
 
