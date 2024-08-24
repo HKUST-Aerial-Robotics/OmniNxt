@@ -25,28 +25,26 @@
   <img src="misc/system_overview.png" alt="system overview" />
 </div>
 
-## News
+## 📢News
 
 * **[30/06/2024]**: OmniNxt is accepted to IROS 2024.
 * **[15/08/2024]** V0.1 Release
 
-## Hardware
+## Outline
 
-You can access our latest design by using Fusion360.
+[TOC]
 
-Projest link: https://a360.co/3vK6dJd
+## 🤖Build your own OmniNxt 
 
-Access code: hkustUAV
+> You should have basic knowledge of the standard quadrotor's electronic system. 
 
-### BOM
+#### BOM
 
-All our components can be purchased at Taobao
-
-| Component                     | Specification                                                | Link                                                         |
+| 🧰Component                    | 📏 Specification                                              | 🔗 Purchase Link                                              |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ***Quad-Fisheye Camera Set*** |                                                              |                                                              |
 | OAK-FFC-4P                    | Camera control board                                         | [Official](https://shop.luxonis.com/products/oak-ffc-4p) / [Taobao](https://detail.tmall.com/item.htm?abbucket=2&id=797243380525&ns=1&priceTId=213e37fe17166914596117457e9698&skuId=5432965948084&spm=a21n57.1.item.4.2d47523c7FgKjv) |
-| B0335 (OV9782)                | Camera  modules (210-degree fisheye lens)                    | [Official](https://www.arducam.com/product/arducam-1mp-ov9782-global-shutter-color-mipi-camera-module-22pin-for-depthai-oak-dm1090ffc) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=681463610876&ns=1&priceTId=213e376b17166916784225765e28ee&skuId=5076193835807&spm=a21n57.1.item.10.2d47523c7FgKjv) |
+| B0335 (OV9782)                | Camera  modules (Fisheye lens FOV larger than 210 degrees)   | [Official](https://www.arducam.com/product/arducam-1mp-ov9782-global-shutter-color-mipi-camera-module-22pin-for-depthai-oak-dm1090ffc) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=681463610876&ns=1&priceTId=213e376b17166916784225765e28ee&skuId=5076193835807&spm=a21n57.1.item.10.2d47523c7FgKjv) |
 | Camera cables                 | Customized                                                   | Camera cable SCH                                             |
 | ***Onboard computer***        |                                                              |                                                              |
 | Jetson Orin Nx                |                                                              |                                                              |
@@ -62,49 +60,33 @@ All our components can be purchased at Taobao
 | Motors                        | 2204 1750KV/ 1804 2450KV                                     |                                                              |
 | 6S Battery                    |                                                              |                                                              |
 
+Our latest design can be accessed by Fusion360.🔗[Link](https://a360.co/3vK6dJd )  Access code: **hkustUAV**
 
+#### Multi-fisheye Camera Module
 
-#### Camera cable SCH
+ROS wrap driver 🔗[oak_ffc_4p](https://github.com/D2SLAM-Fusion/oak_ffc_4p_ros), which contains hardware information, ROS1 driver and test tools.  
 
-![image-20240526120914708](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202405261209056.png)
+Calibration tool 🔗 [quater-calib](https://github.com/D2SLAM-Fusion/tools-quarterKalibr?tab=readme-ov-file)
 
------
+#### Jetson Orin
 
------
-
-
-
-## System Settings
-
-### Multi-fisheye camera set
-
-![image-20240703002552632](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202407030025811.png)
-
-
-
-
-
-Camera hardware preparation and ROS wrap driver see [oak_ffc_4p](https://github.com/D2SLAM-Fusion/oak_ffc_4p_ros)
-
-Calibrate this camera set see [quater-calib](https://github.com/D2SLAM-Fusion/tools-quarterKalibr?tab=readme-ov-file)
-
-### Jetson Orin
-
-Our Jetson Info:
+**Environment Info**
 
 ![image-20240813153943466](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408131539535.png)
 
-We suggest you follow these settings to avoid conflict (especially CUDA and tensorRT).
+We suggest you follow these settings to avoid conflict (especially CUDA and TensorRT).
 
-### Nxt-FC
+#### Nxt-FC
 
-We open-source a coin-size PX4-based flight controller see [NXT-FC](https://github.com/HKUST-Aerial-Robotics/Nxt-FC)
+We open-source hardware designs at 🔗[NXT-FC](https://github.com/HKUST-Aerial-Robotics/Nxt-FC).  Nxt-FC supports [PX4](https://github.com/PX4/PX4-Autopilot) and [Ardupilot](https://github.com/ArduPilot/ardupilot) firmware.
 
-Follow the **Setting up Nxt-FC** part to configure your flight controller.
+Follow the **instructions for setting up the Nxt-FC** part to configure your flight controller.
 
-### Runtime setup
+The PX4 parameter of OmniNxt can be downloaded from [Onedrive]([OmniNxt-03.params](https://hkustconnect-my.sharepoint.com/:u:/g/personal/pliuan_connect_ust_hk/ET4mtqjwqqNOmA8y2WK9rqoBrwlOHXtEKi6IFt4mSGJmqg?e=KJVn5Y)).
 
-Our Omni-VINS and Omni-Depth are developed from D2SLAM. Since building the docker images on the local host (Jetson Orin) usually takes a long time, we suggest you pull the images from the docker-hub.
+## 💾Runtime setup
+
+Our Omni-VINS and Omni-Depth are developed from D2SLAM. Since building the Docker images on the local machine(Jetson Orin) usually takes a long time, we suggest you pull the images from the Docker Hub. If you want to build the Docker image on your local machine, follow the instructions [Build Docker Images On Local Machine](#Build Docker images in local machines).
 
 the docker images structure is as follows:
 
@@ -116,30 +98,36 @@ the docker images structure is as follows:
 git clone --branch pr_fix_main https://github.com/HKUST-Aerial-Robotics/D2SLAM.git
 ```
 
+
+
 #### Step 2 Configure your quad-cam parameters and VINS parameters following our template
 
 ```shell
 cd ./D2SLAM/config/quadcam_drone_nxt_tmp
 ```
 
-if you have already calibrated your quad fisheye camera set, you can simply replace the files with the same name, which includes:
+If you have already calibrated your quad fisheye camera set, you can simply replace the files with the same name, which includes:
 
 1. **stereo_calib_n_m_240_320.yaml** (n and m is the camera number; used in Omni-Depth). 
 2. **fisheye_cams.yaml**. (used in Omni-VINS)
 
+
+
 #### Step 3 Configure ./start_docker.sh script with your local environment.
 
-./start_docker.sh is under the **./D2SLAM** directory.
+**./start_docker.sh** is under the **./D2SLAM** directory.
 
 Modify the following parameters with the absolute path under your local host environment.
 
 1. DATA_SET (where the data set is) (Optional)
 
-Then run with the following command under the D2SLAM directory(very important, this will map your D2SLAM dir into the container)：
+Then run with the following command under the D2SLAM directory (very important, this will map your D2SLAM dir into the container)：
 
 ```shell
 ./start_docker.sh 1
 ```
+
+
 
 #### Step 4 Launch algorithm modules
 
@@ -151,11 +139,9 @@ source ./devel/setup.bash
 roslaunch d2vins quadcam.laucnh
 ```
 
-***Only launch Omni-VINS, please remove the nodes in the red box*** 
+***Only launch Omni-VINS. Please remove the nodes in the red box*** 
 
 ![image-20240814230125692](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408142301837.png)
-
-and then
 
 ```shell
 source ./devel/setup.bash
@@ -169,7 +155,7 @@ source ./devel/setup.bash
 roslaunch quadcam_depth_est depth-node.launch
 ```
 
-[Notice] If you are running Omni-VINS and Omni-Depth for the first time, the initialization time for these two modules would be a little bit long as these two modules would generate the inference engine.
+**[Notice]** If you are running Omni-VINS and Omni-Depth for the first time, the initialization process of these two modules would be a little bit long because of the building of the inference engine.
 
 
 
@@ -181,41 +167,47 @@ If everything works well, you will see
 
 which means Omni-VINS(D2VINS) initialized normally.
 
-
-
-And 
+Omni-Depth
 
 ![image-20240814231049022](https://khalil-picgo-1321910894.cos.ap-hongkong.myqcloud.com/images/202408142310101.png)
 
-for Omni-Depth.
+### 🖥️Build Docker images in local machines
 
+#### Step 1 Build Jeston_base image
 
+```shell
+cd /D2SLA/docker
+make jetson_orin_base
+```
 
-#### Other settings
+#### Step 2 Build Jeston Orin image
 
-OmniNxt px4 parameter: 
+```shell
+cd /D2SLA/docker
+make jetson_orin
+```
 
+#### 
 
-
-##### PX4 Controller
+#### PX4 Controller
 
 We highly suggest you refer to Fast-Lab's PX4 controller [PX4-Control](https://github.com/ZJU-FAST-Lab/Fast-Drone-250/tree/master/src/realflight_modules/px4ctrl)
 
 We also provide our yaw-rotation-free version of  Fast-Lab's PX4 controller [PX4-Control](https://github.com/D2SLAM-Fusion/controller-PX4Control).
 
- Please cite ZJU-Fast-Lab if these modules are useful for your research and project.
+Please cite ZJU-Fast-Lab if these modules are useful for your research and project.
 
-##### Flight planer
+#### Flight planer
 
 We modified some of the strategies in the [ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner.git).  Our version is here [ego-planner-omni-modify](https://github.com/D2SLAM-Fusion/planner-EgoPlanner) 
 
- Please cite ZJU-Fast-Lab's [ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner.git) if these modules are useful for your research and project.
+Please cite ZJU-Fast-Lab's [ego-planner](https://github.com/ZJU-FAST-Lab/ego-planner.git) if these modules are useful for your research and project.
 
 
 
-#### Trouble shooting
+## 🔧Troubleshooting
 
 
 
-### Reference
+## 💯Acknowledgment
 
