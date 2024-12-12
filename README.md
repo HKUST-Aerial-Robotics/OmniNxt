@@ -40,25 +40,26 @@
 
 #### BOM
 
-| 🧰Component                    | 📏 Specification                                              | 🔗 Purchase Link                                              |
-| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ***Quad-Fisheye Camera Set*** |                                                              |                                                              |
-| OAK-FFC-4P                    | Camera control board                                         | [Official](https://shop.luxonis.com/products/oak-ffc-4p) / [Taobao](https://detail.tmall.com/item.htm?abbucket=2&id=797243380525&ns=1&priceTId=213e37fe17166914596117457e9698&skuId=5432965948084&spm=a21n57.1.item.4.2d47523c7FgKjv) |
-| B0335 (OV9782)                | Camera  modules (Fisheye lens FOV larger than 210 degrees)   | [Official](https://www.arducam.com/product/arducam-1mp-ov9782-global-shutter-color-mipi-camera-module-22pin-for-depthai-oak-dm1090ffc) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=681463610876&ns=1&priceTId=213e376b17166916784225765e28ee&skuId=5076193835807&spm=a21n57.1.item.10.2d47523c7FgKjv) |
-| Camera cables                 | Customized                                                   | Camera cable SCH                                             |
-| ***Onboard computer***        |                                                              |                                                              |
-| Jetson Orin Nx                |                                                              |                                                              |
-| Jetson Orin Nx carrier board  |                                                              | [DM](https://item.taobao.com/item.htm?id=719455999699&spm=a1z10.1-c-s.w4004-23557095002.16.165328f6HpXRcJ&skuId=5047593809727) |
-| Jetson Orin Nx radiator       |                                                              |                                                              |
-| Jeston Orin Network card      |                                                              |                                                              |
-| 2230 SSD                      |                                                              |                                                              |
-| Intel AX200                   |                                                              |                                                              |
-| ***Flight platforms*** (6S)   |                                                              |                                                              |
-| Nxt-FC                        | [Project Page](https://github.com/HKUST-Aerial-Robotics/Nxt-FC) | [MicoAir](https://micoair.com/flightcontroller_nxtpx4v2/) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=720171355815&ns=1&priceTId=2150440c17167079494632690e1d2e&spm=a21n57.1.item.4.54dc523cLAwNaW) |
-| Flight frame                  | Customized                                                   | [Fusion360](https://a360.co/3vK6dJd)                         |
-| Protector                     | Customized / Oddity RC XI35 protector                        | [Fusion360](https://a360.co/3vK6dJd) / [Oddity RC](https://oddityrc.com/products/oddityrc-xi35-pro-1?variant=42274592981142) |
-| Motors                        | 2204 1750KV/ 1804 2450KV                                     |                                                              |
-| 6S Battery                    |                                                              |                                                              |
+| 🧰Component                            | 📏 Specification                                              | 🔗 Purchase Link                                              |
+| ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ***Quad-Fisheye Camera Set***         |                                                              |                                                              |
+| OAK-FFC-4P                            | Camera control board                                         | [Official](https://shop.luxonis.com/products/oak-ffc-4p) / [Taobao](https://detail.tmall.com/item.htm?abbucket=2&id=797243380525&ns=1&priceTId=213e37fe17166914596117457e9698&skuId=5432965948084&spm=a21n57.1.item.4.2d47523c7FgKjv) |
+| OAK-FFC-4P-new (Highly recommended! ) | Camera control board designed for OmniNxt                    | [Official_Email](contact@oakchina.cn) / [Taobao](https://item.taobao.com/item.htm?id=844758039668) |
+| B0335 (OV9782)                        | Camera  modules (Fisheye lens FOV larger than 210 degrees)   | [Official](https://www.arducam.com/product/arducam-1mp-ov9782-global-shutter-color-mipi-camera-module-22pin-for-depthai-oak-dm1090ffc) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=681463610876&ns=1&priceTId=213e376b17166916784225765e28ee&skuId=5076193835807&spm=a21n57.1.item.10.2d47523c7FgKjv) |
+| Camera cables                         | Customized                                                   | Camera cable SCH                                             |
+| ***Onboard computer***                |                                                              |                                                              |
+| Jetson Orin Nx                        |                                                              |                                                              |
+| Jetson Orin Nx carrier board          |                                                              | [DM](https://item.taobao.com/item.htm?id=719455999699&spm=a1z10.1-c-s.w4004-23557095002.16.165328f6HpXRcJ&skuId=5047593809727) |
+| Jetson Orin Nx radiator               |                                                              |                                                              |
+| Jeston Orin Network card              |                                                              |                                                              |
+| 2230 SSD                              |                                                              |                                                              |
+| Intel AX200                           |                                                              |                                                              |
+| ***Flight platforms*** (6S)           |                                                              |                                                              |
+| Nxt-FC                                | [Project Page](https://github.com/HKUST-Aerial-Robotics/Nxt-FC) | [MicoAir](https://micoair.com/flightcontroller_nxtpx4v2/) / [Taobao](https://item.taobao.com/item.htm?abbucket=2&id=720171355815&ns=1&priceTId=2150440c17167079494632690e1d2e&spm=a21n57.1.item.4.54dc523cLAwNaW) |
+| Flight frame                          | Customized                                                   | [Fusion360](https://a360.co/3vK6dJd)                         |
+| Protector                             | Customized / Oddity RC XI35 protector                        | [Fusion360](https://a360.co/3vK6dJd) / [Oddity RC](https://oddityrc.com/products/oddityrc-xi35-pro-1?variant=42274592981142) |
+| Motors                                | 2204 1750KV/ 1804 2450KV                                     |                                                              |
+| 6S Battery                            |                                                              |                                                              |
 
 Our latest design can be accessed by Fusion360.🔗[Link](https://a360.co/3vK6dJd )  Access code: **hkustUAV**
 
