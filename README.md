@@ -38,16 +38,13 @@ Please cite our paper if you use this project in your research:
 * [OmniNxt: A Fully Open-source and Compact Aerial Robot with Omnidirectional Visual Perception](https://ieeexplore.ieee.org/document/10802134), Peize Liu, Chen Feng, Yang Xu, Yan Ning, Hao Xu, and Shaojie Shen, 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
 
 ```
-@INPROCEEDINGS{10802134,
+@inproceedings{liu2024omninxt,
+  title={Omninxt: A fully open-source and compact aerial robot with omnidirectional visual perception},
   author={Liu, Peize and Feng, Chen and Xu, Yang and Ning, Yan and Xu, Hao and Shen, Shaojie},
-  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
-  title={OmniNxt: A Fully Open-source and Compact Aerial Robot with Omnidirectional Visual Perception}, 
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={10605--10612},
   year={2024},
-  volume={},
-  number={},
-  pages={10605-10612},
-  keywords={Robot vision systems;Software algorithms;Autonomous aerial vehicles;Cameras;Software;Hardware;Sensor systems;Real-time systems;Sensors;Visual perception},
-  doi={10.1109/IROS58592.2024.10802134}
+  organization={IEEE}
 }
 ```
 
